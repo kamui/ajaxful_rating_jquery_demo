@@ -1,16 +1,16 @@
-This is a functional example for the plugin Ajaxful Rating:
+This is a functional demo for the ajaxful_rating_jquery plugin for Rails 2.3.x:
 
-http://github.com/edgarjs/ajaxful-rating
+http://github.com/kamui/ajaxful_rating_jquery
 
-=== Check the live demo:
+=== Checkout the live demo here:
 
-http://axr.heroku.com
+http://axrj.heroku.com
 
 === Clone it on your machine:
 
 To run the app (each line is a single command):
 
-  git clone git://github.com/edgarjs/ajaxful-rating_demo_app.git
+  git clone git://github.com/kamui/ajaxful_rating_demo.git
   rake gems:install
   rake db:migrate
   script/server

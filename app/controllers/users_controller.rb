@@ -39,10 +39,9 @@ class UsersController < ApplicationController
   def rate
     @user = User.find(params[:id])
     @user.rate(params[:stars], current_user, params[:dimension])
-    render :update do |page|
-      page.replace_html @user.wrapper_dom_id(params), ratings_for(@user, params.merge(:wrap => false))
-      page.visual_effect :highlight, @user.wrapper_dom_id(params)
-    end
+    average = @user.rate_average(true, params[:dimension])
+    width = (average / @user.class.max_stars.to_f) * 100
+    render :json => {:id => @user.wrapper_dom_id(params), :average => average, :width => width}
   end
   
   def destroy

@@ -1,18 +1,17 @@
-login: &login
-  adapter: mysql
-  encoding: utf8
-  pool: 5
-  username: root
-  password:
-
 development:
-  <<: *login
-  database: axr_demo_development
+  adapter: sqlite3
+  database: db/ajaxful_rating_jquery_demo_development.sqlite3
+  pool: 5
+  timeout: 5000
 
 test:
-  <<: *login
-  database: axr_demo_test
-
+  adapter: sqlite3
+  database: db/ajaxful_rating_jquery_demo_test.sqlite3
+  pool: 5
+  timeout: 5000
+  
 production:
-  <<: *login
-  database: axr_demo
+  adapter: sqlite3
+  database: db/ajaxful_rating_jquery_demo.sqlite3
+  pool: 5
+  timeout: 5000

@@ -8,7 +8,7 @@
 <p>
   Global Avg: <%= ratings_for @user, :dimension => :behavior %>
 </p>
-Your rating: <%= ratings_for @user, :force_static => true, :dimension => :behavior, :small => true, :show_user_rating => true %>
+Your rating: <%= ratings_for @user, :force_static => true, :dimension => :behavior, :size => 'small', :show_user_rating => true %>
 <p>
   <%= link_to "View All", users_path %>
 </p>

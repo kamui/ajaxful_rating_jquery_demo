@@ -15,9 +15,9 @@
     <tr>
       <td><%=h car.brand %></td>
       <td><%=h car.name %></td>
-      <td><%= ratings_for car, :static, :small => true, :dimension => :speed %></td>
-      <td><%= ratings_for car, :static, :small => true, :dimension => :beauty %></td>
-      <td><%= ratings_for car, :static, :small => true, :dimension => :price %></td>
+      <td><%= ratings_for car, :static, :size => 'small', :dimension => :speed %></td>
+      <td><%= ratings_for car, :static, :size => 'small', :dimension => :beauty %></td>
+      <td><%= ratings_for car, :static, :size => 'small', :dimension => :price %></td>
       <td><%= link_to "Show", car %></td>
       <td><%= link_to "Edit", edit_car_path(car) %></td>
       <td><%= link_to "Destroy", car, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -12,6 +12,7 @@
   <body>
     <div id="container">
       <h1><a href="http://github.com/kamui/ajaxful_rating_jquery">ajaxful_rating_jquery</a> Demo</h1>
+      <p>You need to <%= link_to "create a user account", signup_path %> to rate cars and other users.</p>
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
